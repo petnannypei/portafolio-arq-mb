@@ -266,11 +266,12 @@ img {
 .hero-mono-title {
   font-family: var(--display);
   font-weight: var(--display-weight);
-  font-size: clamp(48px, 10vw, 156px);
-  line-height: 0.98;
-  letter-spacing: -0.035em;
+  font-size: clamp(40px, 5.4vw, 92px);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
   margin: 0;
   align-self: center;
+  overflow-wrap: break-word;
 }
 .hero-mono-title em {
   font-style: normal;
@@ -291,8 +292,8 @@ img {
   align-self: center;
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
-  gap: clamp(48px, 6vw, 96px);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
+  gap: clamp(40px, 5vw, 80px);
   align-items: start;
 }
 .hero-mono-titlebox-l {
@@ -1342,6 +1343,11 @@ img {
 #tweaks-root { font-family: var(--sans); }
 
 /* ── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 1100px) {
+  .hero-mono-titlebox { grid-template-columns: 1fr; gap: 40px; }
+  .hero-mono-cv { max-width: none; }
+}
 
 @media (max-width: 1024px) {
   :root { --gutter: 32px; --section-y: 120px; }

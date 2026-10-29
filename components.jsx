@@ -29,6 +29,7 @@ const CONTENT = {
       cta: "Ver proyectos",
       meta: "Selección curada de obra",
       credits: [
+        { text: "Mario Benavides — Gerente General" },
         { text: "Arquitecto Diseñador  ·  BIM Architect  ·  CQC Manager" },
         { text: "Universidad Nacional de Colombia" },
         { text: "Certified Architect  ·  US Army Corps of Engineers", logo: "usace" },
@@ -46,7 +47,7 @@ const CONTENT = {
       eyebrow: "Motto",
       body: (
         <>
-          Diseño con el <span className="accent">rigor que exige la obra</span> y la sensibilidad de quien enseña a pensar el espacio. La precisión técnica y el buen gusto no se negocian y nunca van por separado. Lo que se dibuja se debe construir, y lo que se construye se disfruta habitándolo.
+          En QCCS diseñamos con el <span className="accent">rigor que exige la obra</span> y la sensibilidad de quien enseña a pensar el espacio. La precisión técnica y el buen gusto no se negocian y nunca van por separado. Lo que se dibuja se debe construir, y lo que se construye se disfruta habitándolo.
         </>
       ),
       creds: ["Universidad Nacional de Colombia", "TU Wien", "US Army Corps of Engineers"],
@@ -70,9 +71,13 @@ const CONTENT = {
     },
     foot: {
       eyebrow: "Contacto",
-      title: ["Tú lo sueñas,", "yo lo diseño,", "juntos lo construimos."],
+      title: ["Tú lo sueñas,", "nosotros lo diseñamos."],
       subtitle: "Démosle forma a tus ideas y realicemos ese sueño con soluciones de Diseño Arquitectónico estéticas, eficientes y económicamente factibles.",
-      email: "m.albertobenarivera@gmail.com",
+      email: "qcs-gerencia@qualitycontrolconsultants.pro",
+      emails: [
+        "qcs-gerencia@qualitycontrolconsultants.pro",
+        "qcs-comercial@qualitycontrolconsultants.pro",
+      ],
       phone: "+57 305 291 7776",
       phoneRaw: "573052917776",
       ctaWhatsApp: "WhatsApp",
@@ -121,6 +126,7 @@ const CONTENT = {
       cta: "See work",
       meta: "Curated body of work",
       credits: [
+        { text: "Mario Benavides — General Manager" },
         { text: "Architect Designer  ·  BIM Architect  ·  CQC Manager" },
         { text: "Universidad Nacional de Colombia" },
         { text: "Certified Architect  ·  US Army Corps of Engineers", logo: "usace" },
@@ -138,7 +144,7 @@ const CONTENT = {
       eyebrow: "Motto",
       body: (
         <>
-          I design with the <span className="accent">rigour the work demands</span> and the sensibility of someone who teaches space as thought. Technical precision and good taste are non-negotiable and never travel apart. What is drawn must be built, and what is built must be enjoyed in inhabiting it.
+          At QCCS we design with the <span className="accent">rigour the work demands</span> and the sensibility of someone who teaches space as thought. Technical precision and good taste are non-negotiable and never travel apart. What is drawn must be built, and what is built must be enjoyed in inhabiting it.
         </>
       ),
       creds: ["Universidad Nacional de Colombia", "TU Wien", "US Army Corps of Engineers"],
@@ -162,9 +168,13 @@ const CONTENT = {
     },
     foot: {
       eyebrow: "Contact",
-      title: ["You dream it,", "I design it,", "together we build it."],
+      title: ["You dream it,", "we design it."],
       subtitle: "Let's give shape to your ideas and bring your dream to life with architectural design that is beautiful, efficient and economically viable.",
-      email: "m.albertobenarivera@gmail.com",
+      email: "qcs-gerencia@qualitycontrolconsultants.pro",
+      emails: [
+        "qcs-gerencia@qualitycontrolconsultants.pro",
+        "qcs-comercial@qualitycontrolconsultants.pro",
+      ],
       phone: "+57 305 291 7776",
       phoneRaw: "573052917776",
       ctaWhatsApp: "WhatsApp",
@@ -846,6 +856,7 @@ function HeroMonogram({ t, lang }) {
               <span>Universidad Nacional de Colombia</span>
               <span>TU Wien</span>
               <span>US Army Corps of Engineers</span>
+              <span>Gerencia de Proyectos — PMI y Scrum</span>
             </p>
           </div>
           <div className="col col-cta">
@@ -1236,8 +1247,8 @@ function Foot({ t, lang }) {
           <div className="t-eyebrow" style={{ marginBottom: 32 }}>{t.foot.eyebrow}</div>
           <h2 className="foot-title">
             {t.foot.title[0]}<br />
-            <em>{t.foot.title[1]}</em><br />
-            {t.foot.title[2]}
+            <em>{t.foot.title[1]}</em>
+            {t.foot.title[2] ? <React.Fragment><br />{t.foot.title[2]}</React.Fragment> : null}
           </h2>
           <p className="foot-sub">{t.foot.subtitle}</p>
           <div className="foot-ctas">
@@ -1336,7 +1347,9 @@ function Foot({ t, lang }) {
           <div className="foot-col">
             <h4>{t.foot.colDirect}</h4>
             <ul>
-              <li><a href={`mailto:${t.foot.email}`}>{t.foot.email}</a></li>
+              {(t.foot.emails || [t.foot.email]).map((e, i) => (
+                <li key={i}><a href={`mailto:${e}`}>{e}</a></li>
+              ))}
               <li><a href={`tel:+${t.foot.phoneRaw}`}>{t.foot.phone}</a></li>
             </ul>
           </div>
@@ -1357,7 +1370,6 @@ function Foot({ t, lang }) {
             </a>
           </span>
         )}
-        <span>{t.foot.base[1]}</span>
       </div>
     </footer>
   );
