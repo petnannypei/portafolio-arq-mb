@@ -73,10 +73,10 @@ const CONTENT = {
       eyebrow: "Contacto",
       title: ["Tú lo sueñas,", "nosotros lo diseñamos."],
       subtitle: "Démosle forma a tus ideas y realicemos ese sueño con soluciones de Diseño Arquitectónico estéticas, eficientes y económicamente factibles.",
-      email: "qcs-gerencia@qualitycontrolconsultants.pro",
+      email: "qccs-gerencia@qualitycontrolconsultants.pro",
       emails: [
-        "qcs-gerencia@qualitycontrolconsultants.pro",
-        "qcs-comercial@qualitycontrolconsultants.pro",
+        "qccs-gerencia@qualitycontrolconsultants.pro",
+        "qccs-comercial@qualitycontrolconsultants.pro",
       ],
       phone: "+57 305 291 7776",
       phoneRaw: "573052917776",
@@ -170,10 +170,10 @@ const CONTENT = {
       eyebrow: "Contact",
       title: ["You dream it,", "we design it."],
       subtitle: "Let's give shape to your ideas and bring your dream to life with architectural design that is beautiful, efficient and economically viable.",
-      email: "qcs-gerencia@qualitycontrolconsultants.pro",
+      email: "qccs-gerencia@qualitycontrolconsultants.pro",
       emails: [
-        "qcs-gerencia@qualitycontrolconsultants.pro",
-        "qcs-comercial@qualitycontrolconsultants.pro",
+        "qccs-gerencia@qualitycontrolconsultants.pro",
+        "qccs-comercial@qualitycontrolconsultants.pro",
       ],
       phone: "+57 305 291 7776",
       phoneRaw: "573052917776",
@@ -1351,12 +1351,6 @@ function Foot({ t, lang }) {
                 <li key={i}><a href={`mailto:${e}`}>{e}</a></li>
               ))}
               <li><a href={`tel:+${t.foot.phoneRaw}`}>{t.foot.phone}</a></li>
-            </ul>
-          </div>
-          <div className="foot-col">
-            <h4>{t.foot.colLocate}</h4>
-            <ul>
-              {t.foot.locate.map((p, i) => <li key={i}>{p}</li>)}
             </ul>
           </div>
         </Reveal>
