@@ -8,7 +8,7 @@ const { useEffect, useRef, useState } = React;
 const CONTENT = {
   es: {
     nav: {
-      brand: "Mario Benavides",
+      brand: "QCCS",
       links: [
         { id: "work", label: "Proyectos" },
         { id: "about", label: "Estudio" },
@@ -17,7 +17,8 @@ const CONTENT = {
     },
     hero: {
       eyebrow: "Selección de proyectos",
-      title: "Mario\nBenavides",
+      title: "La experiencia de\nnuestros líderes",
+      lead: "Proyectos desarrollados por nuestros líderes a lo largo de su trayectoria profesional.",
       sub: [
         "Diseño Arquitectónico",
         "Diseño Interior y Remodelación",
@@ -33,7 +34,7 @@ const CONTENT = {
         { text: "Certified Architect  ·  US Army Corps of Engineers", logo: "usace" },
       ],
       cv: {
-        bio: "Estudié Arquitectura en la Universidad Nacional de Colombia, en Bogotá. Desarrollé mi tesis de grado con reconocimiento meritorio en la línea de profundización en Arquitectura y Urbanismo de la Universidad Técnica de Viena, Austria. Profesionalmente he alternado mi trabajo como Arquitecto de proyecto en Diseño Arquitectónico e Interior, Diseño Urbano y Paisajístico; en el mundo de la obra civil he sido Residente, Director, Interventor y Jefe de Control de Calidad con metodología Design & Build. Tengo una importante experiencia docente a nivel universitario en áreas como Urbanismo, Diseño Arquitectónico e Interior, Teoría y Representación Arquitectónica.",
+        bio: "Estudié Arquitectura en la Universidad Nacional de Colombia, en Bogotá. Desarrollé mi tesis de grado con reconocimiento meritorio en la línea de profundización en Arquitectura y Urbanismo de la Universidad Técnica de Viena, Austria. Profesionalmente he alternado mi trabajo como Arquitecto de proyecto en Diseño Arquitectónico e Interior, Diseño Urbano y Paisajístico; en el mundo de la obra civil he sido Residente, Director y Jefe de Control de Calidad con metodología Design & Build. Tengo una importante experiencia docente a nivel universitario en áreas como Urbanismo, Diseño Arquitectónico e Interior, Teoría y Representación Arquitectónica.",
         interests: [
           "Diseño Arquitectónico e Interior",
           "Diseño Urbano y Paisajístico",
@@ -91,11 +92,15 @@ const CONTENT = {
       colLocate: "Ubicación",
       locate: ["Pereira, Colombia", "Eje Cafetero"],
       base: ["© Mario Benavides — Todos los derechos reservados", "Pereira · 2025"],
+      company: {
+        label: "QCCS — Quality Control Consultants",
+        url: "https://qualitycontrolconsultants.pro",
+      },
     },
   },
   en: {
     nav: {
-      brand: "Mario Benavides",
+      brand: "QCCS",
       links: [
         { id: "work", label: "Work" },
         { id: "about", label: "Studio" },
@@ -104,7 +109,8 @@ const CONTENT = {
     },
     hero: {
       eyebrow: "Selected projects",
-      title: "Mario\nBenavides",
+      title: "The experience of\nour leaders",
+      lead: "Projects developed by our leaders throughout their professional careers.",
       sub: [
         "Architectural Design",
         "Interior Design & Refurbishment",
@@ -120,7 +126,7 @@ const CONTENT = {
         { text: "Certified Architect  ·  US Army Corps of Engineers", logo: "usace" },
       ],
       cv: {
-        bio: "I studied Architecture at the Universidad Nacional de Colombia (Bogotá) and spent two years at TU Wien (Austria), in the Architecture & Urbanism specialization, where I completed my graduation thesis with honours. Professionally I have alternated between project architecture in Architectural and Interior Design and Urban & Landscape Design, and a long career in civil works as Site Architect, Construction Manager, Site Engineer Auditor, Technical Coordinator, Design & Build lead and on-site Quality Control Manager. In academia I sustain an active teaching practice at university level in Urbanism, Architectural & Interior Design, Theory and Architectural Representation.",
+        bio: "I studied Architecture at the Universidad Nacional de Colombia (Bogotá) and spent two years at TU Wien (Austria), in the Architecture & Urbanism specialization, where I completed my graduation thesis with honours. Professionally I have alternated between project architecture in Architectural and Interior Design and Urban & Landscape Design, and a long career in civil works as Site Architect, Construction Manager, Technical Coordinator, Design & Build lead and on-site Quality Control Manager. In academia I sustain an active teaching practice at university level in Urbanism, Architectural & Interior Design, Theory and Architectural Representation.",
         interests: [
           "Architectural & Interior Design",
           "Urban & Landscape Design",
@@ -178,6 +184,10 @@ const CONTENT = {
       colLocate: "Locations",
       locate: ["Pereira, Colombia", "Coffee Region"],
       base: ["© Mario Benavides — All rights reserved", "Pereira · 2025"],
+      company: {
+        label: "QCCS — Quality Control Consultants",
+        url: "https://qualitycontrolconsultants.pro",
+      },
     },
   },
 };
@@ -786,6 +796,7 @@ function HeroMonogram({ t, lang }) {
               </span>
             ))}
           </h1>
+          {t.hero.lead && <p className="hero-mono-lead">{t.hero.lead}</p>}
           <div className="hero-mono-credits">
             {credits.map((c, i) => (
               <div key={i} className="hero-mono-credits-line">
@@ -1339,6 +1350,13 @@ function Foot({ t, lang }) {
       </div>
       <div className="foot-base">
         <span>{t.foot.base[0]}</span>
+        {t.foot.company && (
+          <span>
+            <a href={t.foot.company.url} target="_blank" rel="noreferrer">
+              {t.foot.company.label}
+            </a>
+          </span>
+        )}
         <span>{t.foot.base[1]}</span>
       </div>
     </footer>
