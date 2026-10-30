@@ -30,7 +30,8 @@ const CONTENT = {
       meta: "Selección curada de obra",
       credits: [
         { text: "Mario Benavides — Gerente General" },
-        { text: "Arquitecto Diseñador  ·  BIM Architect  ·  CQC Manager" },
+        { text: "Arquitecto Diseñador" },
+        { text: "BIM Architect  ·  CQC Manager" },
         { text: "Universidad Nacional de Colombia" },
         { text: "Certified Architect  ·  US Army Corps of Engineers", logo: "usace" },
       ],
@@ -127,7 +128,8 @@ const CONTENT = {
       meta: "Curated body of work",
       credits: [
         { text: "Mario Benavides — General Manager" },
-        { text: "Architect Designer  ·  BIM Architect  ·  CQC Manager" },
+        { text: "Architect Designer" },
+        { text: "BIM Architect  ·  CQC Manager" },
         { text: "Universidad Nacional de Colombia" },
         { text: "Certified Architect  ·  US Army Corps of Engineers", logo: "usace" },
       ],
