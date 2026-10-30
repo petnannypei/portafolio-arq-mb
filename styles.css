@@ -1941,3 +1941,7 @@ img {
   .pdetail-nav-arrow { font-size: 18px; }
   .pdetail-nav-name { font-size: 18px !important; }
 }
+
+@media (max-width: 600px) {
+  .odr-block { margin-bottom: -52px; }
+}
