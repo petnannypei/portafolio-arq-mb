@@ -660,7 +660,7 @@ function Nav({ lang, setLang, t }) {
   }, []);
   return (
     <nav className={`nav ${scrolled ? "is-scrolled" : ""}`}>
-      <a href="#top" className="nav-brand" aria-label={t.nav.brand}>
+      <a href="https://qualitycontrolconsultants.pro" className="nav-brand" aria-label="Volver a QCCS">
         <span className="nav-logo" aria-hidden="true"></span>
       </a>
       <div className="nav-links">
