@@ -1301,14 +1301,14 @@ img {
 .cursor {
   position: fixed;
   top: 0; left: 0;
-  width: 8px; height: 8px;
+  width: 10px; height: 10px;
   border-radius: 50%;
-  background: var(--ink);
+  background: #E0793C;
   pointer-events: none;
   z-index: 100;
   transform: translate(-50%, -50%);
   transition: width .25s ease, height .25s ease, background .25s ease;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
   display: none;
 }
 .cursor.is-visible { display: block; }
