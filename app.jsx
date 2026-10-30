@@ -31,7 +31,7 @@ function App() {
           <div style={{ fontSize: "11px", letterSpacing: "0.42em", textTransform: "uppercase", opacity: 0.55, marginBottom: "clamp(8px,2.5vw,14px)" }}>División</div>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "baseline", gap: "clamp(12px,4vw,26px)", fontWeight: 400, maxWidth: "100%" }}>
             <span style={{ fontSize: "clamp(12px,3.2vw,16px)", letterSpacing: "0.04em" }}><span style={{ fontSize: "clamp(30px,8vw,40px)" }}>O</span>BRAS</span>
-            <span style={{ fontSize: "clamp(12px,3.2vw,16px)", letterSpacing: "0.04em" }}><span style={{ fontSize: "clamp(30px,8vw,40px)" }}>D</span>ISEÑO</span>
+            <span style={{ fontSize: "clamp(12px,3.2vw,16px)", letterSpacing: "0.04em" }}><span style={{ fontSize: "clamp(30px,8vw,40px)" }}>D</span>ISEÑOS</span>
             <span style={{ fontSize: "clamp(12px,3.2vw,16px)", letterSpacing: "0.04em" }}><span style={{ fontSize: "clamp(30px,8vw,40px)" }}>R</span>EMODELACIONES</span>
           </div>
         </div>
