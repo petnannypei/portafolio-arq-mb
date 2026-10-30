@@ -72,7 +72,7 @@ const CONTENT = {
     },
     foot: {
       eyebrow: "Contacto",
-      title: ["Tú lo sueñas,", "nosotros lo diseñamos."],
+      title: ["Tú lo sueñas,", "nosotros lo diseñamos y juntos lo construimos"],
       subtitle: "Démosle forma a tus ideas y realicemos ese sueño con soluciones de Diseño Arquitectónico estéticas, eficientes y económicamente factibles.",
       email: "qccs-gerencia@qualitycontrolconsultants.pro",
       emails: [
