@@ -29,7 +29,11 @@ function App() {
         <div style={{ height: "90px", background: "linear-gradient(rgba(13,22,32,.4),rgba(13,22,32,.5)),url('/qccs-banda.jpg') center/cover", marginTop: "79px" }} aria-hidden="true"></div>
         <window.Hero t={copy} layout={THEME.heroLayout} lang={lang} />
         <window.Statement t={copy} />
-        <div style={{ height: "90px", background: "linear-gradient(rgba(13,22,32,.4),rgba(13,22,32,.5)),url('/qccs-banda.jpg') center/cover" }} aria-hidden="true"></div>
+        <div style={{ height: "90px", background: "linear-gradient(rgba(13,22,32,.4),rgba(13,22,32,.5)),url('/qccs-banda.jpg') center/cover", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <a href="https://qualitycontrolconsultants.pro" target="_blank" rel="noopener">
+            <img src="/logo-qccs-blanco.png" alt="QCCS — Quality Control Consultants" style={{ height: "26px" }} />
+          </a>
+        </div>
         <window.Projects
           t={copy}
           lang={lang}
