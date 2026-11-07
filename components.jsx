@@ -489,7 +489,7 @@ const PROJECTS = [
     scope: { es: "Edificio de vivienda", en: "Residential building" },
     tone: "tone-a",
     cover: "assets/casa-moreno/portada.webp",
-    ph: { es: "Sala y cocina abierta · Concreto y madera", en: "Living and open kitchen · Concrete and wood" },
+    ph: { es: "Escalera · Madera y doble altura", en: "Staircase · Wood and double height" },
     link: "/casa-moreno.html",
     gallery: [],
   },
