@@ -479,6 +479,20 @@ const PROJECTS = [
       { src: "assets/lede/04.webp", label: { es: "Axonometría · Vista de conjunto", en: "Axonometric · Overall view" } },
     ],
   },
+  {
+    id: "casa-moreno",
+    name: { es: "Edificio Casa Moreno", en: "Edificio Casa Moreno" },
+    place: { es: "Bogotá", en: "Bogotá" },
+    cat: { es: "Proyecto arquitectónico y diseño interior", en: "Architectural project and interior design" },
+    year: "2026",
+    role: { es: "Arquitectura · Interiorismo", en: "Architecture · Interior" },
+    scope: { es: "Edificio de vivienda", en: "Residential building" },
+    tone: "tone-a",
+    cover: "assets/casa-moreno/portada.webp",
+    ph: { es: "Sala y cocina abierta · Concreto y madera", en: "Living and open kitchen · Concrete and wood" },
+    link: "/casa-moreno.html",
+    gallery: [],
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────

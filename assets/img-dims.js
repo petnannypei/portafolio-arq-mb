@@ -49,6 +49,7 @@ window.IMG_DIMS = {
   "assets/cartagena/05.webp": [1100, 614],
   "assets/cartagena/06.webp": [1100, 614],
   "assets/cartagena/portada.webp": [1376, 768],
+  "assets/casa-moreno/portada.webp": [1228, 864],
   "assets/jenos/01.webp": [1200, 1800],
   "assets/jenos/02.webp": [1800, 1200],
   "assets/jenos/03.webp": [640, 960],

@@ -14,6 +14,11 @@ function App() {
   const [lang, setLang] = useState("es");
   const [openProject, setOpenProject] = useState(null);
   const copy = window.CONTENT[lang];
+  const open = (i) => {
+    const link = window.PROJECTS[i] && window.PROJECTS[i].link;
+    if (link) window.location.href = link;
+    else setOpenProject(i);
+  };
 
   useEffect(() => {
     window.applyTypePair(THEME.typePair);
@@ -47,7 +52,7 @@ function App() {
           lang={lang}
           layout={THEME.projectsLayout}
           gridVariant={THEME.gridLayout}
-          onOpen={(i) => setOpenProject(i)}
+          onOpen={open}
         />
         <div style={{ height: "90px", background: "linear-gradient(rgba(13,22,32,.4),rgba(13,22,32,.5)),url('/qccs-banda.jpg') center/cover", display: "flex", alignItems: "center", justifyContent: "center" }}>
           <a href="https://qualitycontrolconsultants.pro" target="_blank" rel="noopener">
@@ -59,7 +64,7 @@ function App() {
       <window.ProjectDetail
         indexOpen={openProject}
         onClose={() => setOpenProject(null)}
-        onNav={(i) => setOpenProject(i)}
+        onNav={open}
         lang={lang}
         t={copy}
       />
