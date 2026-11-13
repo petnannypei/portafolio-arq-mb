@@ -493,6 +493,20 @@ const PROJECTS = [
     link: "/casa-moreno.html",
     gallery: [],
   },
+  {
+    id: "casa-siembra",
+    name: { es: "Casa Siembra", en: "Casa Siembra" },
+    place: { es: "Pereira", en: "Pereira" },
+    cat: { es: "Diseño sostenible", en: "Sustainable design" },
+    year: "2026",
+    role: { es: "Arquitectura · Paisajismo", en: "Architecture · Landscape" },
+    scope: { es: "Vivienda campestre", en: "Country house" },
+    tone: "tone-a",
+    cover: "assets/casa-siembra/portada.webp",
+    ph: { es: "Planta general · Agua y arquitectura", en: "Site plan · Water and architecture" },
+    link: "/casa-siembra.html",
+    gallery: [],
+  },
 ];
 
 /* ─────────────────────────────────────────────────────────
