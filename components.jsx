@@ -1146,9 +1146,12 @@ function ProjectDetail({ indexOpen, onClose, onNav, lang, t }) {
     };
     window.addEventListener("keydown", onKey);
     if (stageRef.current) stageRef.current.scrollTop = 0;
+    const qccsChip = document.getElementById("qccs-chip");
+    if (qccsChip) qccsChip.style.display = "none";
     return () => {
       document.body.style.overflow = prev;
       window.removeEventListener("keydown", onKey);
+      if (qccsChip) qccsChip.style.display = "inline-flex";
     };
   }, [indexOpen, open, onClose, onNav, total]);
 
@@ -1159,6 +1162,13 @@ function ProjectDetail({ indexOpen, onClose, onNav, lang, t }) {
 
   return (
     <div className="pdetail" role="dialog" aria-modal="true" aria-label={p.name[lang]}>
+      <button
+        type="button"
+        onClick={onClose}
+        style={{ position: "fixed", bottom: 24, right: 24, zIndex: 9999, display: "inline-flex", alignItems: "center", gap: 7, padding: "9px 18px", background: "rgba(21,37,53,0.92)", border: "1px solid #5AA0BE", borderRadius: 999, color: "#7CC0D8", fontSize: 11, fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", textDecoration: "none", backdropFilter: "blur(8px)", fontFamily: "inherit", cursor: "pointer" }}
+      >
+        <span style={{ fontSize: 13 }}>&larr;</span> {lang === "en" ? "Back to projects" : "Volver a proyectos"}
+      </button>
       <div className="pdetail-stage" ref={stageRef}>
         <header className="pdetail-bar">
           <button className="pdetail-back" onClick={onClose}>
