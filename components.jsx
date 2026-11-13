@@ -502,7 +502,7 @@ const PROJECTS = [
     role: { es: "Arquitectura · Paisajismo", en: "Architecture · Landscape" },
     scope: { es: "Vivienda campestre", en: "Country house" },
     tone: "tone-a",
-    cover: "assets/casa-siembra/portada.webp",
+    cover: "assets/casa-siembra/portada.webp?v=2",
     ph: { es: "Planta general · Agua y arquitectura", en: "Site plan · Water and architecture" },
     link: "/casa-siembra.html",
     gallery: [],
