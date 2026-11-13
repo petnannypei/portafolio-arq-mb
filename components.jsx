@@ -941,6 +941,7 @@ function Statement({ t }) {
 function ProjectCard({ p, lang, index, onOpen }) {
   return (
     <article
+      id={`proyecto-${index + 1}`}
       className="card"
       data-cursor="media"
       tabIndex={0}
@@ -982,6 +983,7 @@ function ProjectsIndex({ t, lang, onOpen }) {
             {PROJECTS.map((p, i) => (
               <article
                 key={p.id}
+                id={`proyecto-${i + 1}`}
                 className={`pidx-row ${i === active ? "is-active" : ""}`}
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}
@@ -1455,6 +1457,12 @@ function applyDensity(d) {
 }
 
 function Projects({ t, lang, gridVariant, layout, onOpen }) {
+  useEffect(() => {
+    const m = window.location.hash.match(/^#proyecto-(\d+)$/);
+    if (!m) return;
+    const el = document.getElementById(`proyecto-${m[1]}`);
+    if (el) setTimeout(() => el.scrollIntoView({ block: "center" }), 100);
+  }, []);
   if (layout === "bento") return <ProjectsBento t={t} lang={lang} gridVariant={gridVariant} onOpen={onOpen} />;
   return <ProjectsIndex t={t} lang={lang} onOpen={onOpen} />;
 }
