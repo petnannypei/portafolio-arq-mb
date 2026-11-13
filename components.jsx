@@ -1165,6 +1165,7 @@ function ProjectDetail({ indexOpen, onClose, onNav, lang, t }) {
       <button
         type="button"
         onClick={onClose}
+        className="float-chip"
         style={{ position: "fixed", bottom: 24, right: 24, zIndex: 9999, display: "inline-flex", alignItems: "center", gap: 7, padding: "9px 18px", background: "rgba(21,37,53,0.92)", border: "1px solid #5AA0BE", borderRadius: 999, color: "#7CC0D8", fontSize: 11, fontWeight: 500, letterSpacing: "0.22em", textTransform: "uppercase", textDecoration: "none", backdropFilter: "blur(8px)", fontFamily: "inherit", cursor: "pointer" }}
       >
         <span style={{ fontSize: 13 }}>&larr;</span> {lang === "en" ? "Back to projects" : "Volver a proyectos"}
